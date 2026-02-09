@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/marine_sim.dir/src/SeaState.cpp.o CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o CMakeFiles/marine_sim.dir/src/Wave.cpp.o CMakeFiles/marine_sim.dir/src/main.cpp.o -o marine_sim  /opt/homebrew/lib/libraylib.dylib
