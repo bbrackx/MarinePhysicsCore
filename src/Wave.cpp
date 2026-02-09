@@ -5,8 +5,8 @@
 #define M_PI 3.14159265358979323846
 #endif
 
-WaveComponent::WaveComponent(double height, double period, double phase, double directionDeg) {
-    double g = 9.81;
+WaveComponent::WaveComponent(float height, float period, float phase, float directionDeg) {
+    float g = 9.81;
     
     m_height = height;
     m_period = period;
@@ -16,10 +16,10 @@ WaveComponent::WaveComponent(double height, double period, double phase, double 
     m_omega = 2.0 * M_PI / m_period;
     m_wavelength = g * std::pow(m_period,2) / (2.0 * M_PI);
     m_waveNumber = 2.0 * M_PI / m_wavelength;
-    m_kx = m_waveNumber * std::cos(m_direction);
-    m_kz = m_waveNumber * std::sin(m_direction);
+    m_kx = m_waveNumber * std::cosf(m_direction);
+    m_kz = m_waveNumber * std::sinf(m_direction);
 }
 
-double WaveComponent::getElevation(double x, double z, double t) const {
-    return m_amplitude * std::cos(m_kx * x + m_kz * z - m_omega * t + m_phase);
+float WaveComponent::getElevation(float x, float z, float t) const {
+    return m_amplitude * std::cosf(m_kx * x + m_kz * z - m_omega * t + m_phase);
 }

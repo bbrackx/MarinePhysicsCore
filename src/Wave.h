@@ -5,30 +5,30 @@
 
 class WaveComponent{
 private:
-    double m_height;
-    double m_period;
-    double m_amplitude;
-    double m_omega;
-    double m_wavelength;
-    double m_waveNumber;
-    double m_phase;
-    double m_direction;
-    double m_kx;
-    double m_kz;
+    float m_height;
+    float m_period;
+    float m_amplitude;
+    float m_omega;
+    float m_wavelength;
+    float m_waveNumber;
+    float m_phase;
+    float m_direction;
+    float m_kx;
+    float m_kz;
 
 public:
-    WaveComponent(double height, double period, double phase = 0.0, double directionDeg = 0.0);
+    WaveComponent(float height, float period, float phase = 0.0, float directionDeg = 0.0);
 
-    double getElevation(double x, double z, double t) const;
+    float getElevation(float x, float z, float t) const;
 
-    double getHeight() const {return m_height;}
-    double getPeriod() const {return m_period;}
-    double getAmplitude() const {return m_amplitude;}
-    double getWavelength() const {return m_wavelength;}
-    double getWaveNumber() const {return m_waveNumber;}
-    double getOmega() const {return m_omega;}
-    double getPhase() const {return m_phase;}
-    double getDirectionDeg() const {return m_direction * 180.0 / 3.14159265358979323846;}
+    float getHeight() const {return m_height;}
+    float getPeriod() const {return m_period;}
+    float getAmplitude() const {return m_amplitude;}
+    float getWavelength() const {return m_wavelength;}
+    float getWaveNumber() const {return m_waveNumber;}
+    float getOmega() const {return m_omega;}
+    float getPhase() const {return m_phase;}
+    float getDirectionDeg() const {return m_direction * 180.0 / 3.14159265358979323846;}
 };
 
 #endif

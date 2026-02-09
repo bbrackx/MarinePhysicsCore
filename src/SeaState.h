@@ -4,18 +4,18 @@
 #include "Wave.h"
 
 struct JONSWAPConfig {
-    double Hs;
-    double Tp;
-    double directionDeg;
-    double gamma =3.3;
+    float Hs;
+    float Tp;
+    float directionDeg;
+    float gamma =3.3;
     int numComponents = 50;
 };
 
 struct SwellConfig {
-    double height;
-    double period;
-    double directionDeg;
-    double phase = 0.0;
+    float height;
+    float period;
+    float directionDeg;
+    float phase = 0.0;
 };
 
 class SeaState {
@@ -25,7 +25,7 @@ std::vector<WaveComponent> m_components;
 public:
     void addJONSWAP(const JONSWAPConfig& config);
     void addSwell(const SwellConfig& config);
-    double getElevation(double x, double z, double t) const;
+    float getElevation(float x, float z, float t) const;
     const std::vector<WaveComponent>& getComponents() const { return m_components; }
 };
 

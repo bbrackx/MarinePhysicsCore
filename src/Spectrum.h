@@ -4,7 +4,7 @@
 #include <vector>
 #include "Wave.h"
 
-double jonswapSpectrum(double omega, double Hs, double Tp, double gamma = 3.3);
-std::vector<WaveComponent> generateJONSWAPWaves(double Hs, double Tp, int numComponents = 50, double directionDeg = 0.0, double gamma = 3.3);
+float jonswapSpectrum(float omega, float Hs, float Tp, float gamma = 3.3);
+std::vector<WaveComponent> generateJONSWAPWaves(float Hs, float Tp, int numComponents = 50, float directionDeg = 0.0, float gamma = 3.3);
 
 #endif

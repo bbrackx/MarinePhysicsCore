@@ -9,18 +9,18 @@ int main() {
     // --- Sea state definition ---
     SeaState sea;
 
-    double jonswapHs = 2.5;
-    double jonswapTp = 8.0;
-    double jonswapDir = 45.0;
+    float jonswapHs = 2.5;
+    float jonswapTp = 8.0;
+    float jonswapDir = 0.0;
     sea.addJONSWAP({jonswapHs, jonswapTp, jonswapDir});
 
-    double swellH = 0.5;
-    double swellT = 12.0;
-    double swellDir = 0.0;
+    float swellH = 0.5;
+    float swellT = 12.0;
+    float swellDir = 45.0;
     sea.addSwell({swellH, swellT, swellDir});
 
     // --- Grid setup ---
-    const int gridSize = 100;
+    const int gridSize = 200;
     const float spacing = 1.0f;
     const float offsetX = (gridSize * spacing) / 2.0f;
     const float offsetZ = (gridSize * spacing) / 2.0f;
@@ -29,7 +29,7 @@ int main() {
     std::vector<float> elevations(gridSize * gridSize);
 
     // --- raylib window ---
-    InitWindow(1710, 1112, "Marine Physics Core");
+    InitWindow(1200, 800, "Marine Physics Core");
     SetTargetFPS(60);
 
     Camera3D camera = {};
@@ -39,8 +39,8 @@ int main() {
     camera.fovy = 45.0f;
     camera.projection = CAMERA_PERSPECTIVE;
 
-    double simTime = 0.0;
-    double dt = 1.0 / 60.0;
+    float simTime = 0.0;
+    float dt = 1.0 / 60.0;
 
     while (!WindowShouldClose()) {
         UpdateCamera(&camera, CAMERA_FREE);
@@ -129,13 +129,13 @@ int main() {
             Vector2 xLabel = GetWorldToScreen({22, 0, 0}, camera);
             Vector2 yLabel = GetWorldToScreen({0, 22, 0}, camera);
             Vector2 zLabel = GetWorldToScreen({0, 0, 22}, camera);
-            DrawText(TextFormat("JONSWAP: Hs=%.1fm  Tp=%.1fs  Dir=%.0f°", jonswapHs, jonswapTp, jonswapDir), 10, 70, 18, RED);
-            DrawText(TextFormat("Swell:   H=%.1fm   T=%.1fs   Dir=%.0f°", swellH, swellT, swellDir), 10, 95, 18, RED);
             DrawText("X", (int)xLabel.x, (int)xLabel.y, 20, RED);
             DrawText("Y", (int)yLabel.x, (int)yLabel.y, 20, GREEN);
             DrawText("Z", (int)zLabel.x, (int)zLabel.y, 20, BLUE);
 
             DrawText("Marine Physics Core", 10, 10, 20, WHITE);
+            DrawText(TextFormat("JONSWAP: Hs=%.1fm  Tp=%.1fs  Dir=%.0f°", jonswapHs, jonswapTp, jonswapDir), 10, 70, 18, PURPLE);
+            DrawText(TextFormat("Swell:   H=%.1fm   T=%.1fs   Dir=%.0f°", swellH, swellT, swellDir), 10, 95, 18, PURPLE);
             DrawFPS(10, 40);
         EndDrawing();
     }

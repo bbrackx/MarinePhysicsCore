@@ -7,40 +7,40 @@
 #define M_PI 3.14159265358979323846
 #endif
 
-double jonswapSpectrum(double omega, double Hs, double Tp, double gamma){
+float jonswapSpectrum(float omega, float Hs, float Tp, float gamma){
     if (omega <= 0.0) return 0.0;
 
-    double omegaP = 2.0 * M_PI / Tp;
-    double spm = (5.0 / 16.0) * std::pow(Hs, 2.0) * std::pow(omegaP, 4.0) * std::pow(omega, -5.0) * std::exp(-1.25 * std::pow(omega / omegaP, -4.0));
+    float omegaP = 2.0 * M_PI / Tp;
+    float spm = (5.0 / 16.0) * std::pow(Hs, 2.0) * std::pow(omegaP, 4.0) * std::pow(omega, -5.0) * std::exp(-1.25 * std::pow(omega / omegaP, -4.0));
     
-    double sigma = (omega <= omegaP) ? 0.07 : 0.09;
-    double b = std::exp(-0.5 * std::pow((omega - omegaP) / (sigma * omegaP), 2.0));
-    double aGamma = 1.0 - 0.287 * std::log(gamma);
+    float sigma = (omega <= omegaP) ? 0.07 : 0.09;
+    float b = std::exp(-0.5 * std::pow((omega - omegaP) / (sigma * omegaP), 2.0));
+    float aGamma = 1.0 - 0.287 * std::log(gamma);
 
-    double S = aGamma * spm * std::pow(gamma,b);
+    float S = aGamma * spm * std::pow(gamma,b);
 
     return S;
 }
 
-std::vector<WaveComponent> generateJONSWAPWaves(double Hs, double Tp, int numComponents, double directionDeg, double gamma) {
+std::vector<WaveComponent> generateJONSWAPWaves(float Hs, float Tp, int numComponents, float directionDeg, float gamma) {
     std::vector<WaveComponent> waves;
 
-    double omegaP = 2.0 * M_PI / Tp;
-    double omegaMin = 0.3 * omegaP;
-    double omegaMax = 3.0 * omegaP;
-    double deltaOmega = (omegaMax - omegaMin) / numComponents;
+    float omegaP = 2.0 * M_PI / Tp;
+    float omegaMin = 0.3 * omegaP;
+    float omegaMax = 3.0 * omegaP;
+    float deltaOmega = (omegaMax - omegaMin) / numComponents;
 
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_real_distribution<double> phaseDist(0.0, 2.0 * M_PI);
+    std::uniform_real_distribution<float> phaseDist(0.0, 2.0 * M_PI);
 
     for (int i = 0; i < numComponents; i++){
-        double omega = omegaMin + (i + 0.5) * deltaOmega;
-        double S_omega = jonswapSpectrum(omega, Hs, Tp);
-        double amplitude = std::sqrt(2.0 * S_omega * deltaOmega);
-        double height = 2.0 * amplitude;
-        double period = 2.0 * M_PI / omega;
-        double phase = phaseDist(gen);
+        float omega = omegaMin + (i + 0.5) * deltaOmega;
+        float S_omega = jonswapSpectrum(omega, Hs, Tp);
+        float amplitude = std::sqrt(2.0 * S_omega * deltaOmega);
+        float height = 2.0 * amplitude;
+        float period = 2.0 * M_PI / omega;
+        float phase = phaseDist(gen);
         
         waves.push_back(WaveComponent(height, period, phase, directionDeg));
     }
