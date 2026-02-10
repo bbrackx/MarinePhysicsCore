@@ -129,6 +129,78 @@ marine_sim/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/build
 .PHONY : marine_sim/fast
 
+src/Hydrostatics.o: src/Hydrostatics.cpp.o
+.PHONY : src/Hydrostatics.o
+
+# target to build an object file
+src/Hydrostatics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o
+.PHONY : src/Hydrostatics.cpp.o
+
+src/Hydrostatics.i: src/Hydrostatics.cpp.i
+.PHONY : src/Hydrostatics.i
+
+# target to preprocess a source file
+src/Hydrostatics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.i
+.PHONY : src/Hydrostatics.cpp.i
+
+src/Hydrostatics.s: src/Hydrostatics.cpp.s
+.PHONY : src/Hydrostatics.s
+
+# target to generate assembly for a file
+src/Hydrostatics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.s
+.PHONY : src/Hydrostatics.cpp.s
+
+src/Integrator.o: src/Integrator.cpp.o
+.PHONY : src/Integrator.o
+
+# target to build an object file
+src/Integrator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/src/Integrator.cpp.o
+.PHONY : src/Integrator.cpp.o
+
+src/Integrator.i: src/Integrator.cpp.i
+.PHONY : src/Integrator.i
+
+# target to preprocess a source file
+src/Integrator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/src/Integrator.cpp.i
+.PHONY : src/Integrator.cpp.i
+
+src/Integrator.s: src/Integrator.cpp.s
+.PHONY : src/Integrator.s
+
+# target to generate assembly for a file
+src/Integrator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/src/Integrator.cpp.s
+.PHONY : src/Integrator.cpp.s
+
+src/RigidBody.o: src/RigidBody.cpp.o
+.PHONY : src/RigidBody.o
+
+# target to build an object file
+src/RigidBody.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o
+.PHONY : src/RigidBody.cpp.o
+
+src/RigidBody.i: src/RigidBody.cpp.i
+.PHONY : src/RigidBody.i
+
+# target to preprocess a source file
+src/RigidBody.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/src/RigidBody.cpp.i
+.PHONY : src/RigidBody.cpp.i
+
+src/RigidBody.s: src/RigidBody.cpp.s
+.PHONY : src/RigidBody.s
+
+# target to generate assembly for a file
+src/RigidBody.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/src/RigidBody.cpp.s
+.PHONY : src/RigidBody.cpp.s
+
 src/SeaState.o: src/SeaState.cpp.o
 .PHONY : src/SeaState.o
 
@@ -234,6 +306,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... marine_sim"
+	@echo "... src/Hydrostatics.o"
+	@echo "... src/Hydrostatics.i"
+	@echo "... src/Hydrostatics.s"
+	@echo "... src/Integrator.o"
+	@echo "... src/Integrator.i"
+	@echo "... src/Integrator.s"
+	@echo "... src/RigidBody.o"
+	@echo "... src/RigidBody.i"
+	@echo "... src/RigidBody.s"
 	@echo "... src/SeaState.o"
 	@echo "... src/SeaState.i"
 	@echo "... src/SeaState.s"

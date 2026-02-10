@@ -85,12 +85,12 @@ clean: CMakeFiles/marine_sim.dir/clean
 CMakeFiles/marine_sim.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target marine_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target marine_sim"
 .PHONY : CMakeFiles/marine_sim.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/marine_sim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/marine_sim.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles 0
 .PHONY : CMakeFiles/marine_sim.dir/rule
@@ -102,7 +102,7 @@ marine_sim: CMakeFiles/marine_sim.dir/rule
 # codegen rule for target.
 CMakeFiles/marine_sim.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/marine_sim.dir/build.make CMakeFiles/marine_sim.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target marine_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target marine_sim"
 .PHONY : CMakeFiles/marine_sim.dir/codegen
 
 # clean rule for target.

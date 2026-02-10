@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Hydrostatics.cpp" "CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o" "gcc" "CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o.d"
+  "/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Integrator.cpp" "CMakeFiles/marine_sim.dir/src/Integrator.cpp.o" "gcc" "CMakeFiles/marine_sim.dir/src/Integrator.cpp.o.d"
+  "/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/RigidBody.cpp" "CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o" "gcc" "CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o.d"
   "/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/SeaState.cpp" "CMakeFiles/marine_sim.dir/src/SeaState.cpp.o" "gcc" "CMakeFiles/marine_sim.dir/src/SeaState.cpp.o.d"
   "/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Spectrum.cpp" "CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o" "gcc" "CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o.d"
   "/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Wave.cpp" "CMakeFiles/marine_sim.dir/src/Wave.cpp.o" "gcc" "CMakeFiles/marine_sim.dir/src/Wave.cpp.o.d"

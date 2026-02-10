@@ -72,10 +72,52 @@ include CMakeFiles/marine_sim.dir/flags.make
 CMakeFiles/marine_sim.dir/codegen:
 .PHONY : CMakeFiles/marine_sim.dir/codegen
 
+CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o: CMakeFiles/marine_sim.dir/flags.make
+CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o: /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Hydrostatics.cpp
+CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o: CMakeFiles/marine_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o -MF CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o.d -o CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o -c /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Hydrostatics.cpp
+
+CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Hydrostatics.cpp > CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.i
+
+CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Hydrostatics.cpp -o CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.s
+
+CMakeFiles/marine_sim.dir/src/Integrator.cpp.o: CMakeFiles/marine_sim.dir/flags.make
+CMakeFiles/marine_sim.dir/src/Integrator.cpp.o: /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Integrator.cpp
+CMakeFiles/marine_sim.dir/src/Integrator.cpp.o: CMakeFiles/marine_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/marine_sim.dir/src/Integrator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/marine_sim.dir/src/Integrator.cpp.o -MF CMakeFiles/marine_sim.dir/src/Integrator.cpp.o.d -o CMakeFiles/marine_sim.dir/src/Integrator.cpp.o -c /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Integrator.cpp
+
+CMakeFiles/marine_sim.dir/src/Integrator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/marine_sim.dir/src/Integrator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Integrator.cpp > CMakeFiles/marine_sim.dir/src/Integrator.cpp.i
+
+CMakeFiles/marine_sim.dir/src/Integrator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/marine_sim.dir/src/Integrator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Integrator.cpp -o CMakeFiles/marine_sim.dir/src/Integrator.cpp.s
+
+CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o: CMakeFiles/marine_sim.dir/flags.make
+CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o: /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/RigidBody.cpp
+CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o: CMakeFiles/marine_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o -MF CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o.d -o CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o -c /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/RigidBody.cpp
+
+CMakeFiles/marine_sim.dir/src/RigidBody.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/marine_sim.dir/src/RigidBody.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/RigidBody.cpp > CMakeFiles/marine_sim.dir/src/RigidBody.cpp.i
+
+CMakeFiles/marine_sim.dir/src/RigidBody.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/marine_sim.dir/src/RigidBody.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/RigidBody.cpp -o CMakeFiles/marine_sim.dir/src/RigidBody.cpp.s
+
 CMakeFiles/marine_sim.dir/src/SeaState.cpp.o: CMakeFiles/marine_sim.dir/flags.make
 CMakeFiles/marine_sim.dir/src/SeaState.cpp.o: /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/SeaState.cpp
 CMakeFiles/marine_sim.dir/src/SeaState.cpp.o: CMakeFiles/marine_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/marine_sim.dir/src/SeaState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/marine_sim.dir/src/SeaState.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/marine_sim.dir/src/SeaState.cpp.o -MF CMakeFiles/marine_sim.dir/src/SeaState.cpp.o.d -o CMakeFiles/marine_sim.dir/src/SeaState.cpp.o -c /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/SeaState.cpp
 
 CMakeFiles/marine_sim.dir/src/SeaState.cpp.i: cmake_force
@@ -89,7 +131,7 @@ CMakeFiles/marine_sim.dir/src/SeaState.cpp.s: cmake_force
 CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o: CMakeFiles/marine_sim.dir/flags.make
 CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o: /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Spectrum.cpp
 CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o: CMakeFiles/marine_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o -MF CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o.d -o CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o -c /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Spectrum.cpp
 
 CMakeFiles/marine_sim.dir/src/Spectrum.cpp.i: cmake_force
@@ -103,7 +145,7 @@ CMakeFiles/marine_sim.dir/src/Spectrum.cpp.s: cmake_force
 CMakeFiles/marine_sim.dir/src/Wave.cpp.o: CMakeFiles/marine_sim.dir/flags.make
 CMakeFiles/marine_sim.dir/src/Wave.cpp.o: /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Wave.cpp
 CMakeFiles/marine_sim.dir/src/Wave.cpp.o: CMakeFiles/marine_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/marine_sim.dir/src/Wave.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/marine_sim.dir/src/Wave.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/marine_sim.dir/src/Wave.cpp.o -MF CMakeFiles/marine_sim.dir/src/Wave.cpp.o.d -o CMakeFiles/marine_sim.dir/src/Wave.cpp.o -c /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/Wave.cpp
 
 CMakeFiles/marine_sim.dir/src/Wave.cpp.i: cmake_force
@@ -117,7 +159,7 @@ CMakeFiles/marine_sim.dir/src/Wave.cpp.s: cmake_force
 CMakeFiles/marine_sim.dir/src/main.cpp.o: CMakeFiles/marine_sim.dir/flags.make
 CMakeFiles/marine_sim.dir/src/main.cpp.o: /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/main.cpp
 CMakeFiles/marine_sim.dir/src/main.cpp.o: CMakeFiles/marine_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/marine_sim.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/marine_sim.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/marine_sim.dir/src/main.cpp.o -MF CMakeFiles/marine_sim.dir/src/main.cpp.o.d -o CMakeFiles/marine_sim.dir/src/main.cpp.o -c /Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/src/main.cpp
 
 CMakeFiles/marine_sim.dir/src/main.cpp.i: cmake_force
@@ -130,6 +172,9 @@ CMakeFiles/marine_sim.dir/src/main.cpp.s: cmake_force
 
 # Object files for target marine_sim
 marine_sim_OBJECTS = \
+"CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o" \
+"CMakeFiles/marine_sim.dir/src/Integrator.cpp.o" \
+"CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o" \
 "CMakeFiles/marine_sim.dir/src/SeaState.cpp.o" \
 "CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o" \
 "CMakeFiles/marine_sim.dir/src/Wave.cpp.o" \
@@ -138,6 +183,9 @@ marine_sim_OBJECTS = \
 # External object files for target marine_sim
 marine_sim_EXTERNAL_OBJECTS =
 
+marine_sim: CMakeFiles/marine_sim.dir/src/Hydrostatics.cpp.o
+marine_sim: CMakeFiles/marine_sim.dir/src/Integrator.cpp.o
+marine_sim: CMakeFiles/marine_sim.dir/src/RigidBody.cpp.o
 marine_sim: CMakeFiles/marine_sim.dir/src/SeaState.cpp.o
 marine_sim: CMakeFiles/marine_sim.dir/src/Spectrum.cpp.o
 marine_sim: CMakeFiles/marine_sim.dir/src/Wave.cpp.o
@@ -145,7 +193,7 @@ marine_sim: CMakeFiles/marine_sim.dir/src/main.cpp.o
 marine_sim: CMakeFiles/marine_sim.dir/build.make
 marine_sim: /opt/homebrew/lib/libraylib.dylib
 marine_sim: CMakeFiles/marine_sim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable marine_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/bbrackx/Documents/Projects/C++/MarinePhysicsCore/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable marine_sim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/marine_sim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
