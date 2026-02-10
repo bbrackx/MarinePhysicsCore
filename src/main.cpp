@@ -6,7 +6,6 @@
 #include <algorithm>
 
 int main() {
-    // --- Sea state definition ---
     SeaState sea;
 
     float jonswapHs = 2.5;
@@ -19,16 +18,12 @@ int main() {
     float swellDir = 45.0;
     sea.addSwell({swellH, swellT, swellDir});
 
-    // --- Grid setup ---
     const int gridSize = 200;
-    const float spacing = 1.0f;
+    const float spacing = 1;
     const float offsetX = (gridSize * spacing) / 2.0f;
     const float offsetZ = (gridSize * spacing) / 2.0f;
-
-    // Pre-allocate elevation grid
     std::vector<float> elevations(gridSize * gridSize);
 
-    // --- raylib window ---
     InitWindow(1200, 800, "Marine Physics Core");
     SetTargetFPS(60);
 
@@ -46,7 +41,6 @@ int main() {
         UpdateCamera(&camera, CAMERA_FREE);
         simTime += dt;
 
-        // --- Precompute all elevations once per frame ---
         for (int iz = 0; iz < gridSize; iz++) {
             float z = iz * spacing - offsetZ;
             for (int ix = 0; ix < gridSize; ix++) {
@@ -59,73 +53,49 @@ int main() {
             ClearBackground(DARKBLUE);
             BeginMode3D(camera);
 
-                // Coordinate axes
                 DrawLine3D({0, 0, 0}, {20, 0, 0}, RED);
                 DrawLine3D({0, 0, 0}, {0, 20, 0}, GREEN);
                 DrawLine3D({0, 0, 0}, {0, 0, 20}, BLUE);
 
-                // --- Wave surface using immediate mode ---
-                rlBegin(RL_TRIANGLES);
-                for (int iz = 0; iz < gridSize - 1; iz++) {
-                    for (int ix = 0; ix < gridSize - 1; ix++) {
-                        float x0 = ix * spacing - offsetX;
-                        float z0 = iz * spacing - offsetZ;
-                        float x1 = (ix + 1) * spacing - offsetX;
-                        float z1 = (iz + 1) * spacing - offsetZ;
-
-                        float y00 = elevations[iz * gridSize + ix];
-                        float y10 = elevations[iz * gridSize + (ix + 1)];
-                        float y01 = elevations[(iz + 1) * gridSize + ix];
-                        float y11 = elevations[(iz + 1) * gridSize + (ix + 1)];
-
-                        // Color based on elevation
-                        unsigned char g00 = (unsigned char)std::clamp(100.0f + y00 * 40.0f + 80.0f, 0.0f, 255.0f);
-                        unsigned char g10 = (unsigned char)std::clamp(100.0f + y10 * 40.0f + 80.0f, 0.0f, 255.0f);
-                        unsigned char g01 = (unsigned char)std::clamp(100.0f + y01 * 40.0f + 80.0f, 0.0f, 255.0f);
-                        unsigned char g11 = (unsigned char)std::clamp(100.0f + y11 * 40.0f + 80.0f, 0.0f, 255.0f);
-
-                        // Triangle 1
-                        rlColor4ub(0, g00, 200, 255); rlVertex3f(x0, y00, z0);
-                        rlColor4ub(0, g01, 200, 255); rlVertex3f(x0, y01, z1);
-                        rlColor4ub(0, g10, 200, 255); rlVertex3f(x1, y10, z0);
-
-                        // Triangle 2
-                        rlColor4ub(0, g10, 200, 255); rlVertex3f(x1, y10, z0);
-                        rlColor4ub(0, g01, 200, 255); rlVertex3f(x0, y01, z1);
-                        rlColor4ub(0, g11, 200, 255); rlVertex3f(x1, y11, z1);
-                    }
-                }
-                rlEnd();
-
-                // --- Grid lines on surface ---
-                int gridLineSpacing = 5;
                 rlBegin(RL_LINES);
-                rlColor4ub(255, 255, 255, 60);
 
-                for (int iz = 0; iz < gridSize; iz += gridLineSpacing) {
+                for (int iz = 0; iz < gridSize; iz++) {
                     for (int ix = 0; ix < gridSize - 1; ix++) {
                         float xa = ix * spacing - offsetX;
                         float xb = (ix + 1) * spacing - offsetX;
                         float z = iz * spacing - offsetZ;
-                        rlVertex3f(xa, elevations[iz * gridSize + ix], z);
-                        rlVertex3f(xb, elevations[iz * gridSize + (ix + 1)], z);
+                        float ya = elevations[iz * gridSize + ix];
+                        float yb = elevations[iz * gridSize + (ix + 1)];
+
+                        unsigned char ga = (unsigned char)std::clamp(100.0f + ya * 40.0f + 80.0f, 0.0f, 255.0f);
+                        unsigned char gb = (unsigned char)std::clamp(100.0f + yb * 40.0f + 80.0f, 0.0f, 255.0f);
+
+                        rlColor4ub(0, ga, 200, 255); rlVertex3f(xa, ya, z);
+                        rlColor4ub(0, gb, 200, 255); rlVertex3f(xb, yb, z);
                     }
                 }
 
-                for (int ix = 0; ix < gridSize; ix += gridLineSpacing) {
+                // Lines along Z
+                for (int ix = 0; ix < gridSize; ix++) {
                     for (int iz = 0; iz < gridSize - 1; iz++) {
                         float x = ix * spacing - offsetX;
                         float za = iz * spacing - offsetZ;
                         float zb = (iz + 1) * spacing - offsetZ;
-                        rlVertex3f(x, elevations[iz * gridSize + ix], za);
-                        rlVertex3f(x, elevations[(iz + 1) * gridSize + ix], zb);
+                        float ya = elevations[iz * gridSize + ix];
+                        float yb = elevations[(iz + 1) * gridSize + ix];
+
+                        unsigned char ga = (unsigned char)std::clamp(100.0f + ya * 40.0f + 80.0f, 0.0f, 255.0f);
+                        unsigned char gb = (unsigned char)std::clamp(100.0f + yb * 40.0f + 80.0f, 0.0f, 255.0f);
+
+                        rlColor4ub(0, ga, 200, 255); rlVertex3f(x, ya, za);
+                        rlColor4ub(0, gb, 200, 255); rlVertex3f(x, yb, zb);
                     }
                 }
+
                 rlEnd();
 
             EndMode3D();
 
-            // Axis labels
             Vector2 xLabel = GetWorldToScreen({22, 0, 0}, camera);
             Vector2 yLabel = GetWorldToScreen({0, 22, 0}, camera);
             Vector2 zLabel = GetWorldToScreen({0, 0, 22}, camera);
